@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
-import os
+import os 
 
 load_dotenv()
+
 
 LATITUDE = os.getenv("LATITUDE")
 LONGITUDE = os.getenv("LONGITUDE")
