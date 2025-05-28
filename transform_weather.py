@@ -13,4 +13,6 @@ def transform_weather(raw_data):
 
     df = pd.DataFrame([weather])
     df.dropna(inplace=True)
+    df.dropna(inplace=True)
+    print(f"This is the DataFrmae: {df}")
     return df
