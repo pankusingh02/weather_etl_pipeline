@@ -3,10 +3,17 @@ from transform_weather import transform_weather
 from load_to_bigquery import load_to_bigquery
 
 def main():
-    raw_data=extract_weather()
-    df= transform_weather(raw_data)
-    load_to_bigquery(df)
+   print("🔄 Extracting weather data...")
+   raw_data = extract_weather()
+   print("✅ Extracted:", raw_data)
 
+   print("🧪 Transforming data...")
+   df = transform_weather(raw_data)
+   print("✅ Transformed dataframe:\n", df)
 
-if __name__=='main':
+   print("🚀 Loading into BigQuery...")
+   load_to_bigquery(df)
+   print("✅ Done.")
+
+if __name__=='__main__':
     main()
